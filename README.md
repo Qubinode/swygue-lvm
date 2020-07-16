@@ -1,4 +1,4 @@
-Role Name
+swygue-lvm
 =========
 
 Create pv, vg, lv, filesystems then mounts and configures /etc/fstab.

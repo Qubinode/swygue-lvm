@@ -1,6 +1,6 @@
 ---
 - name: list volume groups
-  debug: 
+  debug:
     var: item
     verbosity: 2
   with_dict: "{{ ansible_lvm.vgs }}"
@@ -12,7 +12,7 @@
     vg: "{{ vg_name }}"
     force: yes
     pvs: /dev/{{ host_device }}
-  when: create_vg|bool 
+  when: create_vg|bool
   become: True
 
 - name: create custom logical volumes
@@ -22,7 +22,7 @@
     state: present
     size: "{{ item.size }}"
   with_items: "{{ logical_volumes }}"
-  when: create_vg|bool 
+  when: create_vg|bool
   become: True
 
 - name: Ensure filesystems are created
@@ -31,7 +31,7 @@
     dev: "/dev/mapper/{{ vg_name }}-lv_{{ item.name }}"
     opts: "-L {{ item.name }}"
   with_items: "{{ logical_volumes }}"
-  when: create_vg|bool 
+  when: create_vg|bool
   become: True
 
 - name: Ensure mount points are created
