@@ -1,3 +1,4 @@
+![Ansible Lint](![Ansible Lint](https://github.com/Qubinode/swygue-lvm/workflows/Ansible%20Lint/badge.svg?branch=dev)
 swygue-lvm
 =========
 
