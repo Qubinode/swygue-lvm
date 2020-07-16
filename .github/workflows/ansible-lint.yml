@@ -28,4 +28,4 @@ jobs:
         git clone https://github.com/Qubinode/swygue-lvm.git
         cd swygue-lvm
         git checkout dev
-        ansible-lint -x .
+        ansible-lint .
